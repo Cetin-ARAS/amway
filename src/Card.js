@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+<FontAwesomeIcon icon="fa-duotone fa-arrow-up-wide-short" />
 const Card = ({ id, onAdd, onRemove, name }) => {
 const [bv, setBv] = useState(0);
 const [total, setTotal] = useState(0);
@@ -14,7 +14,7 @@ return (
       <button onClick={() => {
         setBv(bv + 100);
         setTotal(total + 100);
-      }}>+</button>
+      }}>{FontAwesomeIcon}</button>
       <button onClick={() => {
         if (bv > 0) {
           setBv(bv - 100);
