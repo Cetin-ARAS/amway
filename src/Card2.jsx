@@ -2,15 +2,14 @@ import { useState } from 'react';
 import Icons, { Icons2, Icons3 } from './packages/Icons';
 import './Card.css';
 
-const Card = ({ id, onAdd, onRemove, name }) => {
+const Card2 = ({ id, onAdd2, onRemove2, name }) => {
 const [bv, setBv] = useState(0);
 const [total, setTotal] = useState(0);
 
 
-
  return (
   <div className='container' >
-    <h3 style={{backgroundColor:"red", display:"flex", justifyContent:"center"}}>sasa{name}</h3>
+    <h3>{name}</h3>
     <div className='ıd'>
        <p ><Icons3/></p> 
        <p id='id' > ID: {id}</p>
@@ -34,11 +33,11 @@ const [total, setTotal] = useState(0);
     <p className='total'>Total: {total}</p>
 
     <div className='signs' >
-      <button className='sum' onClick={onAdd}>+</button>
-      <button className='times' onClick={onRemove}>x</button>
+      <button className='sum' onClick={onAdd2}>+</button>
+      <button className='times' onClick={onRemove2}>x</button>
     </div>
   </div>
  );
 };
 
-export default Card;
+export default Card2;

@@ -1,97 +1,120 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-.container {
-     padding: 11px;
-     border: 1px solid black;
-     border-radius: 0.5rem;
-     width: 11%;
-     margin: 50px; 
-     display: inline-block;
+  }
+  
+  .container {
+    padding: 11px;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    min-width: 11%;
+    width: 11%;
+    margin: 50px;
+    display: inline-block;
+    
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      display: block;
     }
-.ıd{
+  } 
+ 
+  .ıd {
     display: flex;
     flex-direction: row;
-    }
-#id{
+  }
+  
+  #id {
     border-bottom: 1px solid;
-    width:max-content;
+    width: max-content;
     margin-left: 5px;
-}
-
-.bv{
+  }
+  
+  .bv {
     display: flex;
     font-weight: 100;
-    /* margin-top: 2px; */
-    
-}
-#self-bv{
-
-}
-#bv{
-
-    text-decoration-line:underline;
+  }
+  
+  #bv {
+    text-decoration-line: underline;
     margin-left: 3px;
-}
-.buttons {
-   display: grid;
-   margin-left: 105px;
-   position: absolute;
-
-}
- 
-#button1{
+  }
+  
+  .buttons {
+    display: grid;
+    margin-left: 105px;
+    position: absolute;
+  }
+  @media only screen and (max-width: 767px) {
+    .buttons {
+   margin-left: 70%;
+    }
+  }
+  #button1 {
     width: 15px;
     border: 1px white;
-    background-Color: rgb(203, 199, 199);
+    background-color: rgb(203, 199, 199);
     border-radius: 2px;
-}
-#button1 :hover{
+    cursor: pointer;
+  }
+  
+  #button1:hover {
     color: white;
-    background-Color: grey;
-}
-
-#button2{
+    background-color: grey;
+  }
+  
+  #button2 {
     width: 15px;
     margin-right: 10px;
-    background-Color: rgb(203, 199, 199);
+    background-color: rgb(203, 199, 199);
     border: 1px white;
     border-radius: 2px;
-}
-#button2:hover{
+    cursor: pointer;
+  }
+  
+  #button2:hover {
     color: white;
-    background-Color: grey;
-
-}
-.total{
-    /* display: flex;
-    justify-Content: center; */
-    /* font-Size: 20px; */
+    background-color: grey;
+  }
+  
+  .total {
     font-weight: bold;
     margin-top: 20px;
     margin-bottom: 5px;
-}
-.signs{
+  }
+  
+  .signs {
     display: flex;
-    justify-Content: space-between;
+    justify-content: space-between;
     margin-top: 10px;
-       
-}
-.sum{
+  }
+  
+  .sum {
     width: 30px;
-    margin-Right: 20px;
-    background-Color: green;
+    margin-right: 20px;
+    background-color: green;
     color: white;
     border-radius: 4px;
     border: 1px solid white;
-}
-.times{
+    cursor: pointer;
+  }
+  .sum:hover{
+    background-color: rgb(48, 159, 122);
+  }
+  
+  .times {
     width: 30px;
-    margin-Left: 20px;
-    background-Color: grey; 
+    margin-left: 20px;
+    background-color: grey;
     color: white;
     border-radius: 4px;
     border: 1px solid white;
-}
+    cursor: pointer;
+  }
+  .times:hover{
+    background-color: rgb(56, 55, 55);
+  }
