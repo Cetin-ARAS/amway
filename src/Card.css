@@ -1,55 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .container {
-     padding: 15px;
+     padding: 11px;
      border: 1px solid black;
-     width: 10%;
+     border-radius: 0.5rem;
+     width: 11%;
      margin: 50px; 
      display: inline-block;
     }
-.text {
-    display: grid;
-    align-Items: center;
-    justify-Content: center; 
-    font-Size: 20px;
-    margin: 10px; 
-    background-Color:white;
-   
-}
-.bv{
-    text-decoration: underline;
-}
-.buttons {
-   display: flex;
-   justify-Content: center;
+.ıd{
+    display: flex;
+    flex-direction: row;
+    }
+#id{
+    border-bottom: 1px solid;
+    width:max-content;
+    margin-left: 5px;
 }
 
+.bv{
+    display: flex;
+    font-weight: 100;
+    /* margin-top: 2px; */
+    
+}
+#self-bv{
+
+}
+#bv{
+
+    text-decoration-line:underline;
+    margin-left: 3px;
+}
+.buttons {
+   display: grid;
+   margin-left: 105px;
+   position: absolute;
+}
 #button1{
-    width: 30px;
-    margin: 10px;
+    width: 15px;
     background-Color: grey
 }
 #button2{
-    width: 30px;
-    margin: 10px;
+    width: 15px;
+    margin-right: 10px;
     background-Color: grey
 }
 .total{
-    display: flex;
-    justify-Content: center;
-    font-Size: 30px;
+    /* display: flex;
+    justify-Content: center; */
+    /* font-Size: 20px; */
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 .signs{
     display: flex;
     justify-Content: space-between;
+    margin-top: 10px;
+       
 }
 .sum{
     width: 30px;
     margin-Right: 20px;
     background-Color: green;
     color: white;
+    border-radius: 4px;
+    border: 1px solid white;
 }
 .times{
     width: 30px;
     margin-Left: 20px;
     background-Color: grey; 
     color: white;
+    border-radius: 4px;
+    border: 1px solid white;
 }

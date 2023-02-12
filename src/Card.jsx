@@ -8,39 +8,37 @@ const [total, setTotal] = useState(0);
 
 
 
-return (
+ return (
   <div className='container' >
     <h3>{name}</h3>
-    <div>
-      <p className='text'>
-      <p ><Icons3/> ID: {id}</p>
-      <p >Self BV:</p>
-      <p className='bv' >{bv}</p>
-
-      <div className='buttons' >
-      <button id='button1' onClick={() => {setBv(bv + 100);setTotal(total + 100)}}>
-        <Icons/>
-      </button>
-
-      <button id='button2' onClick={() => {
-        if (bv > 0) {
-          setBv(bv - 100);
-          setTotal(total - 100);
-        }
-      }}><Icons2/></button>
-      </div>
-      </p>
-      
+    <div className='ıd'>
+       <p ><Icons3/></p> 
+       <p id='id' > ID: {id}</p>
+    </div>
+    <div className='bv'>
+       <p id='self-bv'>Self BV: </p>
+       <p id='bv' >{bv}</p>
+       <div className='buttons' >
+          <button id='button1' onClick={() => {setBv(bv + 100);setTotal(total + 100)}}>
+          <Icons/>
+          </button>
+          <button id='button2' onClick={() => {
+           if (bv > 0) {
+           setBv(bv - 100);
+           setTotal(total - 100);
+           }
+           }}><Icons2/>
+          </button>
+        </div>      
     </div >
-    <p className='total'><b>Total: {total}</b></p>
+    <p className='total'>Total: {total}</p>
 
     <div className='signs' >
-    <button className='sum' onClick={onAdd}>+</button>
-    <button className='times' onClick={onRemove}>x</button>
-
+      <button className='sum' onClick={onAdd}>+</button>
+      <button className='times' onClick={onRemove}>x</button>
     </div>
   </div>
-);
+ );
 };
 
 export default Card;
