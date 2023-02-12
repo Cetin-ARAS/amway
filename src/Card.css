@@ -39,15 +39,31 @@
    display: grid;
    margin-left: 105px;
    position: absolute;
+
 }
+ 
 #button1{
     width: 15px;
-    background-Color: grey
+    border: 1px white;
+    background-Color: rgb(203, 199, 199);
+    border-radius: 2px;
 }
+#button1 :hover{
+    color: white;
+    background-Color: grey;
+}
+
 #button2{
     width: 15px;
     margin-right: 10px;
-    background-Color: grey
+    background-Color: rgb(203, 199, 199);
+    border: 1px white;
+    border-radius: 2px;
+}
+#button2:hover{
+    color: white;
+    background-Color: grey;
+
 }
 .total{
     /* display: flex;
