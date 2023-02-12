@@ -1,0 +1,55 @@
+.container {
+     padding: 15px;
+     border: 1px solid black;
+     width: 10%;
+     margin: 50px; 
+     display: inline-block;
+    }
+.text {
+    display: grid;
+    align-Items: center;
+    justify-Content: center; 
+    font-Size: 20px;
+    margin: 10px; 
+    background-Color:white;
+   
+}
+.bv{
+    text-decoration: underline;
+}
+.buttons {
+   display: flex;
+   justify-Content: center;
+}
+
+#button1{
+    width: 30px;
+    margin: 10px;
+    background-Color: grey
+}
+#button2{
+    width: 30px;
+    margin: 10px;
+    background-Color: grey
+}
+.total{
+    display: flex;
+    justify-Content: center;
+    font-Size: 30px;
+}
+.signs{
+    display: flex;
+    justify-Content: space-between;
+}
+.sum{
+    width: 30px;
+    margin-Right: 20px;
+    background-Color: green;
+    color: white;
+}
+.times{
+    width: 30px;
+    margin-Left: 20px;
+    background-Color: grey; 
+    color: white;
+}
