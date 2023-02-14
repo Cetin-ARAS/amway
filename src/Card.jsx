@@ -10,7 +10,6 @@ const [total, setTotal] = useState(0);
 
  return (
   <div className='container' >
-    <h3 style={{backgroundColor:"red", display:"flex", justifyContent:"center"}}>sasa{name}</h3>
     <div className='ıd'>
        <p ><Icons3/></p> 
        <p id='id' > ID: {id}</p>
@@ -19,15 +18,17 @@ const [total, setTotal] = useState(0);
        <p id='self-bv'>Self BV: </p>
        <p id='bv' >{bv}</p>
        <div className='buttons' >
-          <button id='button1' onClick={() => {setBv(bv + 100);setTotal(total + 100)}}>
+          <button id='button1' onClick={() => {setBv(bv + 100);setTotal(100 + total)}}>
           <Icons/>
           </button>
           <button id='button2' onClick={() => {
            if (bv > 0) {
            setBv(bv - 100);
-           setTotal(total - 100);
+           setTotal( total > 0 ? total - 100 : 0);
            }
+         
            }}><Icons2/>
+
           </button>
         </div>      
     </div >

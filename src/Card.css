@@ -48,18 +48,25 @@
     display: grid;
     margin-left: 105px;
     position: absolute;
+    /* display: none; */
   }
+  /* .buttons:hover{
+    display: block;
+  } */
+
   @media only screen and (max-width: 767px) {
     .buttons {
    margin-left: 70%;
     }
   }
+  
   #button1 {
     width: 15px;
     border: 1px white;
     background-color: rgb(203, 199, 199);
     border-radius: 2px;
     cursor: pointer;
+    
   }
   
   #button1:hover {
@@ -118,3 +125,5 @@
   .times:hover{
     background-color: rgb(56, 55, 55);
   }
+
+  
