@@ -2,14 +2,13 @@ import { useState } from 'react';
 import Icons, { Icons2, Icons3 } from './packages/Icons';
 import './Card.css';
 
-const Card2 = ({ id, onAdd2, onRemove2, name }) => {
+const Card2 = ({ id, onAdd2, onRemove2 }) => {
 const [bv, setBv] = useState(0);
 const [total, setTotal] = useState(0);
 
 
  return (
   <div className='container' >
-    <h3>{name}</h3>
     <div className='ıd'>
        <p ><Icons3/></p> 
        <p id='id' > ID: {id}</p>
