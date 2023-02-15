@@ -1,20 +1,27 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Icons, { Icons2, Icons3 } from './packages/Icons';
 import './Card.css';
 
 const Card = ({ id, onAdd, onRemove, total, setTotal }) => {
-const [bv, setBv] = useState(0);
+const [bv, setBv] = useState(id ? 0 :total);
+
+useEffect( () => {
+    if(!id) {
+      setBv(total)
+    }
+}, [total])
+
 
 
 
  return (
   <div className='container' >
     <div className='ıd'>
-       <p ><Icons3/></p> 
-       <p id='id' > ID: {id}</p>
+       <i ><Icons3/></i> 
+       <h4 id='id' > DL.: {id}</h4>
     </div>
     <div className='bv'>
-       <p id='self-bv'>Self BV: </p>
+       <h4 id='self-bv'>Self BV: </h4>
        <p id='bv' >{bv}</p>
        <div className='buttons' >
           <button id='button1' onClick={() => {setBv(bv + 100);setTotal(total + 100)}}>
@@ -29,7 +36,7 @@ const [bv, setBv] = useState(0);
           </button>
         </div>      
     </div >
-    <p className='total'>Total: {total}</p>
+    <p className='total'>Total: {bv}</p>
 
     <div className='signs' >
       <button className='sum' onClick={onAdd}>+</button>

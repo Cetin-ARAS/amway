@@ -1,27 +1,38 @@
 import React, { useState } from 'react';
 import Card from './Card';
 import Card2 from './Card2';
-import Diagram from './Diagram';
+import Tree from './Tree';
 
 const App = () => {
-  const [cards, setCards] = useState(["You"]);
-  const [card2, setCard2] = useState(["Me"]);
+  // const [cards, setCards] = useState([]);
+  const [card2, setCard2] = useState(["0"]);
   const [total, setTotal] = useState(0);
   const [total2, setTotal2] = useState(0);
+  const [cards, setCards] = useState(["0"])
   
+ 
 
-  const addCard = () => {
-    setCards([...cards,  + total ]);
-  };
+const addCard = () => {
+  setCards(prevCards => {
+    const lastCard = prevCards[prevCards.length - 1];
+    const newCard = []
+    const newLastCard = [...lastCard, newCard];
+    const newCards = [
+      ...prevCards.slice(0, -1),
+      newLastCard
+    ];
+    return newCards;
+  });
+};
   console.log(cards)
 
   const removeCard = (card) => {
     const index = cards.indexOf(card);
-    setCards(cards.slice(0, index));
+    cards(cards.slice(0, index));
   }
 
   const addCard2 = () => {
-    setCard2([...card2,  + total2 ]);
+    setCard2([...card2, + total]);
   }
   console.log(card2)
 
@@ -55,7 +66,7 @@ const App = () => {
              />
         ))}
      </div>
-     <Diagram cards={cards} />
+     {/* <Tree cards={cards} /> */}
     </div>
   );
 };      

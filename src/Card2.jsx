@@ -10,11 +10,11 @@ const [bv, setBv] = useState(0);
  return (
   <div className='container' >
     <div className='ıd'>
-       <p ><Icons3/></p> 
-       <p id='id' > ID: {id2}</p>
+       <i ><Icons3/></i> 
+       <h4 id='id' > DL.: {id2}</h4>
     </div>
     <div className='bv'>
-       <p id='self-bv'>Self BV: </p>
+       <h4 id='self-bv'>Self BV: </h4>
        <p id='bv' >{bv}</p>
        <div className='buttons' >
           <button id='button1' onClick={() => {setBv(bv + 100);setTotal2(total2 + 100)}}>
