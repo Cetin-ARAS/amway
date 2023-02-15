@@ -2,9 +2,9 @@ import { useState } from 'react';
 import Icons, { Icons2, Icons3 } from './packages/Icons';
 import './Card.css';
 
-const Card = ({ id, onAdd, onRemove }) => {
-  const [bv, setBv] = useState(0);
-const [total, setTotal] = useState(0);
+const Card = ({ id, onAdd, onRemove, total, setTotal }) => {
+const [bv, setBv] = useState(0);
+
 
 
  return (
