@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Icons, { Icons2, Icons3 } from './packages/Icons';
+import Icons, { Icons2, Icons3 } from "../packages/Icons";
 import './Card.css';
 
 const Card = ({ id, onAdd, onRemove, total, setTotal }) => {
@@ -9,13 +9,10 @@ useEffect( () => {
     if(!id) {
       setBv(total)
     }
-}, [total])
-
-
-
+}, [total, id])
 
  return (
-  <div className='container' >
+  <section className='container' >
     <div className='ıd'>
        <i ><Icons3/></i> 
        <h4 id='id' > DL.: {id}</h4>
@@ -36,13 +33,13 @@ useEffect( () => {
           </button>
         </div>      
     </div >
-    <p className='total'>Total: {bv}</p>
+    <h3 className='total'>Total: {bv}</h3>
 
     <div className='signs' >
       <button className='sum' onClick={onAdd}>+</button>
       <button className='times' onClick={onRemove}>x</button>
     </div>
-  </div>
+  </section>
  );
 };
 

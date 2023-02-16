@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import Card from './Card';
-import Card2 from './Card2';
-import Tree from './Tree';
+import Card from '././cards/Card';
+import Card2 from '././cards/Card2';
+import Tree from '././helpers/Tree';
+import '././helpers/Tree.css';
 
 const App = () => {
 
@@ -13,20 +14,19 @@ const App = () => {
   const addCard = () => {
   setCards([...cards, + total]);
   }
-  const removeCard = (card) => {
+  const removeCard = () => {
       setCards(cards.slice(0, -1));
   }
   const addCard2 = () => {
     setCard2([...card2, + total]);
   }
-  console.log(card2)
-
   const removeCard2 = () => {
     setCard2(card2.slice(0, -1));
   };
 
   return (
-    <div>
+    <div >
+      <Tree cards={cards}  />
       <div>
         {cards.map((id, i) => (
         <Card
@@ -51,7 +51,6 @@ const App = () => {
              />
         ))}
      </div>
-     {/* <Tree cards={cards} /> */}
     </div>
   );
 };      
